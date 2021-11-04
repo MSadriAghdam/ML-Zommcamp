@@ -62,9 +62,7 @@ Need to perform clustering to summarize customer segments. (Unsupervised learnin
 Please download the whole project. Here the problem is a clustering (unsupervised learning) model so we are not going to have a train, test and validation dataframe. First you need to run the "train.py" file to train the model, Then run the "predict.py" file to see the reuslt you need to run the code which is saved in "result_on_localhost.py" by executing it the result will show up as a plot.
 
 ## Model deployment as a web service on local machine
-For actual use of a model in real world, it needs to be deployed as a service (application) so that users (e.g. in this case Bank's staff who are supposed to call customer for Term Deposit subscription, can use this service. They can now send customer data to the service and get a prediction whether the customer is likely to make a Term deposit or not and hence whether it would be benificial to make the call to customer).
-
-To test the model deployment as a web service - open 2 separate terminal sessions into your machine (where all this code resides) and activate the virtual environment as explained in 4. Virtual environment and package dependencies
+To test the model deployment as a web service - open 2 separate terminal sessions into your machine (where all this code resides) and activate the virtual environment
 
 From one terminal session run the following command to host the prediction model as a web service.
 
