@@ -89,12 +89,20 @@ Build docker image named Customer_Personality_Analysis
 docker build -t "Customer_Personality_Analysis" .
 Check docker image available. Output of below command should show the image with name Customer_Personality_Analysis
 docker images
-Create a docker container from the image. The model prediction script as a web service will then be running inside this container. Below command will create and run a docker container named Customer_Personality (--name Customer_Personality) running as a daemon i.e. non-interactive mode (-d), mapping the port 9696 on host to port 9696 on container (-p 9696:9696 first port is host port, second is container port. If you want to map different port on host just change the first number), from image bank-td-prediction. The container will be deleted if stopped or when you shutdown your machine (--rm).
+Create a docker container from the image. The model prediction script as a web service will then be running inside this container.
+Below command will create and run a docker container named Customer_Personality (--name Customer_Personality) running as a daemon i.e.
+non-interactive mode (-d), mapping the port 9696 on host to port 9696 on container (-p 9696:9696 first port is host port, second is container port. 
+If you want to map different port on host just change the first number), from image bank-td-prediction. The container will be deleted if stopped or when you shutdown your machine (--rm).
+
 docker run --rm --name Customer_Personality -d -p 9696:9696 Customer_Personality_Analysis
+
 Check whether docker container running. Below command should show the container in Running state and not Exited.
+
 docker ps -a
-Test sending some sample customer data to the web service and see the results. For this you can use the request.py script provided as part of this repo, which has some sample customer entries and can make a request to the Web app service. Ensure you have activated the virtual environment as explained in 4. Virtual environment and package dependencies.
-Check whether you are already in the project directory which you cloned from git. If not change to that directory.
+
+Test sending some sample customer data to the web service and see the results. For this you can use the request.py script provided as part of this repo, 
+which has some sample customer entries and can make a request to the Web app service. Ensure you have activated the virtual environment as explained in 4.
+Virtual environment and package dependencies. Check whether you are already in the project directory which you cloned from git. If not change to that directory.
 
 python predict.py
 
