@@ -1,9 +1,9 @@
-Customer Personality Analysis problem
+# Customer Personality Analysis problem
 DataSet : https://www.kaggle.com/imakash3011/customer-personality-analysis
 
-Goal: Analysis of company's ideal customers
+## Goal: Analysis of company's ideal customers
 
-Problem Statement
+## Problem Statement
 
 Customer Personality Analysis is a detailed analysis of a company’s ideal customers. It helps a business to better understand its customers and makes it easier for them to modify products according to the specific needs, behaviors and concerns of different types of customers.
 
@@ -11,7 +11,7 @@ Customer personality analysis helps a business to modify its product based on it
 
 Content Attributes:
 
-People:
+### People:
 
 ID: Customer's unique identifier
 Year_Birth: Customer's birth year
@@ -25,7 +25,7 @@ Recency: Number of days since customer's last purchase
 Complain: 1 if customer complained in the last 2 years, 0 otherwise
 
 
-Products:
+### Products:
 
 MntWines: Amount spent on wine in last 2 years
 MntFruits: Amount spent on fruits in last 2 years
@@ -35,7 +35,7 @@ MntSweetProducts: Amount spent on sweets in last 2 years
 MntGoldProds: Amount spent on gold in last 2 years
 
 
-Promotion:
+### Promotion:
 
 NumDealsPurchases: Number of purchases made with a discount
 AcceptedCmp1: 1 if customer accepted the offer in the 1st campaign, 0 otherwise
@@ -46,20 +46,22 @@ AcceptedCmp5: 1 if customer accepted the offer in the 5th campaign, 0 otherwise
 Response: 1 if customer accepted the offer in the last campaign, 0 otherwise
 
 
-Place:
+### Place:
 
 NumWebPurchases: Number of purchases made through the company’s web site
 NumCatalogPurchases: Number of purchases made using a catalogue
 NumStorePurchases: Number of purchases made directly in stores
 NumWebVisitsMonth: Number of visits to company’s web site in the last month
-Target
-Need to perform clustering to summarize customer segments.
 
-Instructions:
+
+## Target
+Need to perform clustering to summarize customer segments. (Unsupervised learning and no need to split dataset into train and test)
+
+## Instructions:
 
 Please download the whole project. Here the problem is a clustering (unsupervised learning) model so we are not going to have a train, test and validation dataframe. First you need to run the "train.py" file to train the model, Then run the "predict.py" file to see the reuslt you need to run the code which is saved in "result_on_localhost.py" by executing it the result will show up as a plot.
 
- Model deployment as a web service on local machine
+## Model deployment as a web service on local machine
 For actual use of a model in real world, it needs to be deployed as a service (application) so that users (e.g. in this case Bank's staff who are supposed to call customer for Term Deposit subscription, can use this service. They can now send customer data to the service and get a prediction whether the customer is likely to make a Term deposit or not and hence whether it would be benificial to make the call to customer).
 
 To test the model deployment as a web service - open 2 separate terminal sessions into your machine (where all this code resides) and activate the virtual environment as explained in 4. Virtual environment and package dependencies
@@ -71,7 +73,7 @@ From other terminal session from the cloned project directory, execute the follo
 
 python predict.py
 
-7. Deploy model as a web service to Docker container
+## Deploy model as a web service to Docker container
 You can deploy the trained model as a web service running inside a docker container on your local machine.
 
 Pre-requisites: You should have Docker installed and running on the machine where you want to perform model deployment to docker. Run the below commands to check whether docker service is running and then to see if any docker containers are running.
